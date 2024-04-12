@@ -8,11 +8,14 @@ abstract class Scene {
     var hasBeenCreated = false
         private set
 
+    val layers = ArrayList<Layer>()
+
     abstract fun onCreate()
 
     fun create() {
         hasBeenCreated = true
         onCreate()
+        layers.forEach(Layer::create)
         log.info { "Scene ${this::class.simpleName} was created!" }
     }
 

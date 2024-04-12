@@ -2,7 +2,7 @@ package net.catstack.roguelike.game
 
 import net.catstack.roguelike.engine.Engine
 import net.catstack.roguelike.engine.scenes.Game
-import net.catstack.roguelike.game.scenes.GameScene
+import net.catstack.roguelike.game.scenes.game.GameScene
 
 class MyGame : Game() {
     override fun onCreate() {

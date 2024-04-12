@@ -1,4 +1,4 @@
-package net.catstack.roguelike.game.scenes
+package net.catstack.roguelike.game.scenes.game
 
 import mu.KotlinLogging
 import net.catstack.roguelike.engine.Engine
@@ -9,8 +9,9 @@ import org.lwjgl.glfw.GLFW
 private val log = KotlinLogging.logger {  }
 
 class GameScene : Scene() {
-    override fun onCreate() {
 
+    override fun onCreate() {
+        layers.add(GameLayer())
     }
 
     override fun update(delta: Float) {

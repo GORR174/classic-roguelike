@@ -1,6 +1,7 @@
 package net.catstack.roguelike.engine
 
 import mu.KotlinLogging
+import net.catstack.roguelike.engine.asset.AssetPool
 import net.catstack.roguelike.engine.scenes.Game
 import org.lwjgl.Version
 
@@ -8,6 +9,7 @@ private val log = KotlinLogging.logger {}
 
 object Engine {
     val window = Window()
+    val assets = AssetPool()
 
     lateinit var game: Game
         private set

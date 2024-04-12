@@ -1,6 +1,7 @@
 package net.catstack.roguelike.engine
 
 import mu.KotlinLogging
+import net.catstack.engine.viewports.FitViewport
 import net.catstack.engine.viewports.StretchViewport
 import net.catstack.engine.viewports.Viewport
 import net.catstack.roguelike.engine.input.KeyListener
@@ -36,7 +37,7 @@ class Window {
     lateinit var game: Game
         private set
 
-    var viewport: Viewport = StretchViewport()
+    var viewport: Viewport = FitViewport(16 / 9f)
 
     fun destroy() {
         // Free The memory

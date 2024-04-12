@@ -25,6 +25,7 @@ abstract class Game(scene: Scene = Scene.emptyScene) {
             scene.create()
 
         scene.update(delta)
+        scene.layers.forEach { it.update(delta) }
 
         if (KeyListener.isKeyJustPressed(GLFW.GLFW_KEY_F5)) {
             Engine.game.scene = scene::class.java.getConstructor().newInstance()
