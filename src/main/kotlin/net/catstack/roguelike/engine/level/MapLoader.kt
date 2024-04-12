@@ -1,12 +1,11 @@
 package net.catstack.roguelike.engine.level
 
-import net.catstack.roguelike.engine.Engine
 import net.catstack.roguelike.engine.util.Resources
 import net.catstack.roguelike.game.entities.*
 
 class MapLoader(val gameObjects: ArrayList<GameObject>) {
-    fun loadLevel() {
-        var map = Resources.getTextFromResource("assets/maps/test.map")
+    fun loadLevel(mapName: String) {
+        var map = Resources.getTextFromResource("assets/maps/$mapName.map")
         val mapLines = map.lines()
         val linesSize = mapLines.size
 
