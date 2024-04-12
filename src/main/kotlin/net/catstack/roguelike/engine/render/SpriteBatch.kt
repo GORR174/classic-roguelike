@@ -207,7 +207,7 @@ class SpriteBatch(val fontSize: Int) {
                     3 -> yAdd = 1f
                 }
 
-                vertices[offset] = sprite.position.x * (fontSize - 4) + (xAdd * fontSize * 0.7f)// - (transform.scale.x * transform.origin.x)
+                vertices[offset] = sprite.position.x * (fontSize - 10) + (xAdd * (fontSize - 10))// - (transform.scale.x * transform.origin.x)
                 vertices[offset + 1] = sprite.position.y * fontSize + (yAdd * fontSize)// - (transform.scale.y * transform.origin.y)
 
                 vertices[offset + 2] = color.x
